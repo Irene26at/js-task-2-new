@@ -1,0 +1,54 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+	<meta charset="UTF-8"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<title>Sum Calculator</title> 
+    <style>
+        body { 
+			background-color: rgb(214, 224, 224);  
+		} 
+        .form { 
+			width: 70%; 
+			text-align: center; 
+            color: rgb(22, 21, 21);
+            
+		}
+        h1{
+            color: rgb(14, 13, 13);
+            margin-top: 10%;
+        }
+        input{
+            color: rgb(1, 9, 15);
+            background-color: rgb(230, 224, 224);
+        }
+    </style>
+</head> 
+<body> 
+    <form name="frmsum">
+    <center>
+        <div class="form">
+            <h1>Sum Calculator</h1>
+            <h4>Enter the numbers!</h4>
+            Number 1
+            <input type="text" name="num1" id="num1"><br><br>
+            Number 2
+            <input type="text" name="num2" id="num2"><br><br>
+            Sum 
+            <input type="text" name="sum" id="sum"><br><br>
+            <input type="button" value="Calculate" onclick="calculatesum()">
+        </div>
+    </center>
+    </form>
+    <script lang="javascript">
+        function calculatesum(){
+            var num1, num2, ans;
+            num1 = Number(document.frmsum.num1.value) ;
+            num2 = Number(document.frmsum.num2.value) ;
+            ans = num1+num2;
+            document.frmsum.sum.value = ans;
+        }
+    </script>
+</body> 
+</html>
+        
